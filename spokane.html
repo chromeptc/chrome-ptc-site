@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chrome PTC Spokane | 24-Hour Gym in Spokane, WA</title>
+<meta name="description" content="Chrome PTC Spokane is a locally owned 24-hour gym with a full powerlifting setup, red light infrared saunas and a posing room. See prices, hours and directions.">
+<link rel="canonical" href="https://www.chromepersonaltraining.com/spokane.html">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chrome Personal Training Centre">
+<meta property="og:title" content="Chrome PTC Spokane | 24-Hour Gym in Spokane, WA">
+<meta property="og:description" content="Chrome PTC Spokane is a locally owned 24-hour gym with a full powerlifting setup, red light infrared saunas and a posing room. See prices, hours and directions.">
+<meta property="og:url" content="https://www.chromepersonaltraining.com/spokane.html">
+<meta property="og:image" content="https://www.chromepersonaltraining.com/media/floor-mirror.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one long page. Sticky five-item menu, a video hero with three "start here" doors, then locations, prices, what's included, training, powerlifting, members, FAQ and contact. Black, white and Chrome red from her own logo. */
+  :root {
+    color-scheme: dark;
+    --black: #0a0a0b;
+    --char: #141416;
+    --panel: #1b1b1e;
+    --line: #2c2c31;
+    --white: #f6f6f4;
+    --mute: #a9a9b0;
+    --red: #e2352b;
+    --red-d: #b92a21;
+    --red-text: #ea4a40;   /* lighter red for small red text (readability); brand red stays on buttons and backgrounds */
+    --amber: #f0c15a;
+    --head: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { margin: 0; background: var(--black); color: var(--white); font-family: var(--body); font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img, video { max-width: 100%; display: block; }
+  [hidden] { display: none !important; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+  h1, h2, h3 { font-family: var(--head); text-transform: uppercase; letter-spacing: 0.01em; line-height: 1.02; margin: 0; font-weight: 800; text-wrap: balance; }
+  h1 { font-size: clamp(48px, 8vw, 88px); }
+  h2 { font-size: clamp(36px, 6vw, 56px); }
+  h3 { font-size: 26px; font-weight: 700; }
+  .eyebrow { font-family: var(--head); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 16px; color: var(--red-text); margin-bottom: 8px; }
+  .lede { color: var(--mute); font-size: 20px; max-width: 58ch; margin: 14px 0 0; }
+  section { padding-block: 80px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--head); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 20px; padding: 15px 28px; border-radius: 2px; text-decoration: none; border: 2px solid var(--red); background: var(--red); color: #fff; cursor: pointer; transition: background .15s; min-height: 52px; }
+  .btn:hover { background: var(--red-d); border-color: var(--red-d); }
+  .btn.ghost { background: transparent; border-color: var(--white); color: var(--white); }
+  .btn.ghost:hover { background: var(--white); color: var(--black); }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible, .tabbtn:focus-visible, button:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+
+  /* concept banner + review notes */
+  .concept { background: var(--red); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 8px 20px; display: flex; gap: 8px 18px; justify-content: center; align-items: center; flex-wrap: wrap; text-align: center; }
+  .concept label { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(0,0,0,.28); padding: 4px 10px; border-radius: 2px; }
+  .concept input { accent-color: var(--amber); width: 16px; height: 16px; }
+  .note { display: inline-block; vertical-align: middle; margin-left: 8px; font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #1a1300; background: var(--amber); padding: 2px 8px; border-radius: 2px; }
+  body.nonotes .note { display: none; }
+
+  /* header */
+  header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: rgba(10,10,11,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 70px; }
+  .logo { font-family: var(--head); font-weight: 800; text-transform: uppercase; text-decoration: none; line-height: .9; }
+  .logo b { display: block; font-size: 34px; letter-spacing: .02em; }
+  .logo span { display: block; white-space: nowrap; font-size: 11px; letter-spacing: .28em; font-weight: 600; color: var(--mute); margin-top: 2px; }
+  header.top .wrap { max-width: 1320px; }
+  nav.main { display: flex; align-items: center; gap: 18px; }
+  nav.main a { text-decoration: none; font-family: var(--head); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 16px; color: var(--mute); padding-block: 6px; white-space: nowrap; }
+  nav.main a:hover { color: var(--white); }
+  nav.main .soc { display: flex; align-items: center; gap: 12px; }
+  nav.main .soc a { padding: 6px; display: inline-flex; line-height: 0; }
+  nav.main .soc svg { width: 20px; height: 20px; }
+  nav.main a.btn { color: #fff; padding: 9px 18px; min-height: 0; font-size: 17px; }
+  .menubtn { display: none; background: none; border: 1px solid var(--line); color: var(--white); border-radius: 2px; padding: 10px 14px; font-family: var(--head); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; font-size: 17px; cursor: pointer; }
+  @media (max-width: 1220px) {
+    nav.main { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--black); border-bottom: 1px solid var(--line); padding: 8px 20px 18px; }
+    nav.main.open { display: flex; }
+    nav.main a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 22px; }
+    nav.main .soc { padding: 14px 0 4px; gap: 18px; }
+    nav.main .soc a { border-bottom: 0; padding: 6px; }
+    nav.main .soc svg { width: 26px; height: 26px; }
+    nav.main a.btn { margin-top: 14px; text-align: center; border-bottom: 2px solid var(--red); }
+    .menubtn { display: inline-block; }
+  }
+
+  /* hero */
+  .hero { position: relative; padding-block: 0; background: #111 url("media/hero.jpg") center 40% / cover no-repeat; overflow: hidden; }
+  .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(10,10,11,.88) 0%, rgba(10,10,11,.55) 50%, rgba(10,10,11,.2) 100%), linear-gradient(0deg, rgba(10,10,11,.55) 0%, transparent 35%); }
+  .hero .wrap { position: relative; z-index: 2; min-height: clamp(520px, 78vh, 700px); display: flex; flex-direction: column; justify-content: center; padding-block: 76px 90px; }
+  .hero .hero-in { max-width: 640px; }
+  @media (min-width: 881px) { .hero > .wrap { max-width: none; margin-inline: 0; padding-inline: 40px; } }
+  .hero h1 em { font-style: normal; color: var(--red); }
+  /* split hero preview: Spokane video on top, Liberty Lake underneath */
+  .hero #herovid { top: 0; bottom: auto; height: 50%; }
+  .hero #herovid2 { top: 50%; bottom: auto; height: 50%; }
+  .hero .hdiv { position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: rgba(255,255,255,.6); z-index: 2; }
+  .hero .hlabel { position: absolute; z-index: 3; right: 24px; font-family: var(--head); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: 13.5px; color: #fff; text-decoration: none; background: rgba(10,10,11,.72); border: 1px solid rgba(255,255,255,.5); padding: 5px 10px; max-width: calc(100% - 48px); }
+  .hero .hlabel:hover { border-color: #fff; }
+  .hero .hlabel .note { display: block; margin: 6px 0 0; text-transform: none; letter-spacing: 0; white-space: normal; }
+  .hero .hl-a { top: calc(50% - 62px); }
+  body:not(.splitoff) .hero .hero-in { max-width: 880px; text-shadow: 0 1px 14px rgba(0,0,0,.9); }
+  body:not(.splitoff) .hero .hero-in .lede { color: #fff !important; }
+  body:not(.splitoff) .hero .vidctl { top: 18px; bottom: auto; }
+  .hero .hl-b { bottom: 13px; }
+  body:not(.splitoff) .hero .wrap { min-height: clamp(780px, 92vh, 900px); justify-content: flex-start; padding-block: 64px 0; }
+  body:not(.splitoff) .hero::before { background: linear-gradient(90deg, rgba(10,10,11,.8) 0%, rgba(10,10,11,.58) 45%, rgba(10,10,11,.2) 75%, rgba(10,10,11,.05) 100%); }
+  body.splitoff .hero #herovid { top: 0; bottom: 0; height: 100%; }
+  body.splitoff .hero #herovid2, body.splitoff .hero .hdiv, body.splitoff .hero .hlabel { display: none; }
+  @media (max-width: 700px) { .hero .hlabel { font-size: 10px; padding: 5px 8px; letter-spacing: .05em; left: 12px; right: auto; } .hero .hl-a { top: calc(50% - 40px); } .hero .hl-b { bottom: 8px; } .hero .hlabel .note { font-size: 10px; } body:not(.splitoff) .hero .wrap { min-height: 800px; padding-block: 56px 0; } body:not(.splitoff) .hero::before { background: linear-gradient(180deg, rgba(10,10,11,.35) 0%, rgba(10,10,11,.6) 32%, rgba(10,10,11,.7) 50%, rgba(10,10,11,.7) 72%, rgba(10,10,11,.35) 100%); } body:not(.splitoff) .hero .vidctl { top: 12px; bottom: auto; } }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .vidctl { position: absolute; z-index: 3; right: 16px; bottom: 16px; display: flex; gap: 6px; align-items: stretch; }
+  .sndbtn { display: grid; place-items: center; width: 32px; background: rgba(10,10,11,.75); color: #fff; border: 1px solid rgba(255,255,255,.5); cursor: pointer; padding: 0; }
+  .sndbtn svg { width: 15px; height: 15px; }
+  .sndbtn[aria-pressed="true"] { background: var(--red); border-color: var(--red); }
+  .vidbtn { background: rgba(10,10,11,.75); color: #fff; border: 1px solid rgba(255,255,255,.5); padding: 5px 10px; font-family: var(--head); font-weight: 700; letter-spacing: .07em; text-transform: uppercase; font-size: 13.5px; line-height: 1.55; cursor: pointer; }
+  /* "Hide text" button: clears everything over the hero video so the whole clip can be watched, and brings it back. The hero keeps its size so nothing jumps. */
+  .hero::before, .pghero::before { transition: opacity .35s ease; }
+  .hero > .wrap, .hero .hlabel, .pghero > .wrap { transition: opacity .35s ease, visibility .35s; }
+  .hero.notext::before, .pghero.notext::before { opacity: 0; }
+  .hero.notext > .wrap, .hero.notext .hlabel, .pghero.notext > .wrap { opacity: 0; visibility: hidden; }
+  .vidbtn[aria-pressed="true"].txtbtn { background: var(--red); border-color: var(--red); }
+  @media (prefers-reduced-motion: reduce) { .hero video { display: none; } .vidctl { display: none; } }
+  @media (max-width: 880px) { .vidctl { top: 12px; bottom: auto; } .hero .wrap { min-height: 520px; padding-block: 64px 70px; } .hero::before { background: linear-gradient(0deg, rgba(10,10,11,.92) 0%, rgba(10,10,11,.78) 55%, rgba(10,10,11,.68) 100%); } .hero .eyebrow { color: #ff6a5f; } }
+  /* Split hero text: "Serious gym. Welcoming people." sits on the Spokane video, resting just above the split line; the paragraph sits below the line on the Liberty Lake video. */
+  body:not(.splitoff) .hero .wrap { padding-block: 0; }
+  body:not(.splitoff) .hero .hero-in { flex: 1; display: grid; grid-template-rows: 1fr 1fr; width: 100%; max-width: 880px; }
+  body:not(.splitoff) .hero .hero-top { align-self: end; padding: 84px 0 20px; }
+  body:not(.splitoff) .hero .hero-in .lede { align-self: start; margin: 0; padding-top: 20px; }
+  body:not(.splitoff) .hero .hl-a { top: 16px; left: 40px; right: auto; }
+  @media (max-width: 880px) { body:not(.splitoff) .hero .hl-a { left: 20px; } }
+  @media (max-width: 700px) { body:not(.splitoff) .hero .hl-a { top: 14px; left: 12px; } body:not(.splitoff) .hero .hero-top { padding-top: 70px; } }
+  /* Phones: the two videos sit stacked and touching, each at its own wide shape (nothing cropped). The headline sits on the Spokane video and the paragraph on the Liberty Lake video. Each gym label sits at the bottom-right of its video, and the sound and pause buttons sit under the Liberty Lake video's bottom-right corner. (Visitors who turn animation off keep the original layout.) */
+  @media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+    body:not(.splitoff) .hero { display: block; background: var(--char); padding-bottom: 0; overflow: visible; }
+    body:not(.splitoff) .start { border-top: 0; padding-top: 8px; }
+    body:not(.splitoff) .start .eyebrow { padding-top: 8px; }
+    body:not(.splitoff) .hero::before { top: 0; bottom: auto; left: 0; right: 0; height: 112.5vw; background: linear-gradient(180deg, rgba(10,10,11,.08) 0%, rgba(10,10,11,.55) 25%, rgba(10,10,11,.82) 49.9%, rgba(10,10,11,.82) 50.1%, rgba(10,10,11,.55) 75%, rgba(10,10,11,.08) 100%); }
+    body:not(.splitoff) .hero .hdiv { display: none; }
+    body:not(.splitoff) .hero #herovid, body:not(.splitoff) .hero #herovid2 { position: relative; inset: auto; top: auto; bottom: auto; display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    body:not(.splitoff) .hero > .wrap { position: absolute; top: 0; left: 0; right: 0; height: 112.5vw; min-height: 0; padding: 0 20px; }
+    body:not(.splitoff) .hero .hero-in { display: grid; grid-template-rows: 1fr 1fr; height: 100%; width: auto; max-width: none; }
+    body:not(.splitoff) .hero .hero-top { align-self: end; padding: 0 0 12px; }
+    body:not(.splitoff) .hero .hero-in .lede { align-self: start; margin: 0; padding-top: 10px; font-size: 12px; line-height: 1.35; }
+    body:not(.splitoff) .hero .hlabel { position: absolute; left: auto; right: 10px; bottom: auto; margin: 0; }
+    body:not(.splitoff) .hero .hl-a { top: 10px; }
+    body:not(.splitoff) .hero .hl-b { top: auto; bottom: 10px; }
+    body:not(.splitoff) .hero .vidctl { position: absolute; top: calc(112.5vw + 8px); right: 10px; bottom: auto; left: auto; }
+  }
+  @media (max-width: 360px) and (prefers-reduced-motion: no-preference) { body:not(.splitoff) .hero .hero-in .lede { font-size: 11.5px; line-height: 1.35; } body:not(.splitoff) .hero .hero-top { padding: 0 0 8px; } }
+
+  /* start here */
+  .start { background: var(--char); border-block: 1px solid var(--line); padding-block: 40px; }
+  .start .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+  .door { display: flex; flex-direction: column; gap: 4px; text-decoration: none; background: var(--black); border: 1px solid var(--line); padding: 20px 22px; transition: border-color .15s, transform .15s; }
+  .door:hover { border-color: var(--red); }
+  .door b { font-family: var(--head); font-size: 26px; text-transform: uppercase; letter-spacing: .03em; line-height: 1.05; }
+  .door span { color: var(--mute); font-size: 16px; }
+  .door i { font-style: normal; color: var(--red-text); font-family: var(--head); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 15px; margin-top: 8px; }
+  @media (max-width: 900px) { .start .row { grid-template-columns: repeat(2, 1fr); } .start .row .door:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+  @media (max-width: 520px) { .start .row { grid-template-columns: 1fr; } }
+
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 46px; }
+  .facts div { background: rgba(20,20,22,.92); padding: 16px 18px; }
+  .facts b { display: block; font-family: var(--head); font-size: 30px; font-weight: 800; letter-spacing: .02em; line-height: 1; }
+  .facts span { color: var(--mute); font-size: 14px; }
+  @media (max-width: 700px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+
+  /* locations */
+  .locs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 38px; }
+  .loc { background: var(--char); border: 1px solid var(--line); display: flex; flex-direction: column; position: relative; }
+  .loc .ph { aspect-ratio: 16 / 7; background: #1a1a1d center / cover no-repeat; }
+  .loc .in { padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .loc h3 { font-size: 34px; }
+  .loc .badge { position: absolute; top: 14px; left: 14px; z-index: 2; font-family: var(--head); font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; background: var(--red); padding: 3px 9px; }
+  .loc dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; font-size: 17px; }
+  .loc dt { color: var(--mute); }
+  .loc dd { margin: 0; }
+  .loc .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+  .both { display: flex; align-items: center; gap: 16px; background: var(--panel); border: 1px solid var(--red); padding: 18px 22px; margin-top: 24px; }
+  .both b { display: block; font-family: var(--head); font-size: 26px; text-transform: uppercase; letter-spacing: .03em; line-height: 1.1; margin-bottom: 2px; }
+  .both > div > span { color: var(--mute); font-size: 17px; }
+  .both .note { color: #1a1300; font-size: 12px; margin: 8px 0 0; display: inline-block; }
+  .more { font-family: var(--head); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 15px; color: var(--red-text); text-decoration: none; margin-top: 4px; display: inline-block; }
+  .more:hover { color: #fff; }
+  footer a { color: var(--white); }
+  /* footer: copyright, then the page links (dots between them on wide screens, a clean row on phones) */
+  footer .fleft { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; }
+  footer .flinks { display: inline-flex; flex-wrap: wrap; align-items: center; }
+  footer .flinks a::before { content: "·"; display: inline-block; text-decoration: none; margin: 0 10px 0 4px; color: var(--mute); }
+  @media (max-width: 700px) { footer .fleft { flex-direction: column; align-items: flex-start; } footer .flinks a::before { display: none; } footer .flinks { margin-left: -6px; } footer .flinks a { margin-right: 8px; } }
+  /* touch-friendly tap areas for small text links on phones and tablets */
+  @media (max-width: 900px) {
+    footer .wrap a { display: inline-block; padding: 12px 6px; }
+    .more { display: inline-block; padding: 10px 0; }
+    .crumbs a { display: inline-block; padding: 8px 2px; }
+    dd a { display: inline-block; padding: 8px 0; margin: -8px 0; }
+  }
+  @media (max-width: 800px) { .locs { grid-template-columns: 1fr; } }
+
+  /* pricing */
+  .tabs { display: inline-flex; border: 1px solid var(--line); margin-top: 30px; }
+  .tabbtn { font-family: var(--head); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 20px; padding: 13px 28px; background: transparent; color: var(--mute); border: 0; cursor: pointer; min-height: 52px; }
+  .tabbtn[aria-selected="true"] { background: var(--white); color: var(--black); }
+  .plans { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 22px; }
+  .plan { background: var(--char); border: 1px solid var(--line); padding: 26px 22px 22px; display: flex; flex-direction: column; gap: 8px; position: relative; }
+  .plan.best { border-color: var(--red); }
+  .plan .tag { position: absolute; top: -12px; left: 20px; background: var(--red); font-family: var(--head); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 3px 10px; }
+  .plan .name { font-family: var(--head); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+  .plan .price { font-family: var(--head); font-size: 54px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .plan .price small { font-size: 18px; font-weight: 600; color: var(--mute); }
+  .plan .sub { color: var(--mute); font-size: 16px; }
+  .plan ul { list-style: none; padding: 0; margin: 8px 0 12px; font-size: 16px; display: grid; gap: 4px; }
+  .plan li::before { content: "✓"; color: var(--red); margin-right: 8px; font-weight: 700; }
+  .plan .btn { margin-top: auto; font-size: 18px; padding: 12px 16px; }
+  .daypass { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--line); padding: 22px 24px; scroll-margin-top: 90px; }
+  .daypass b { font-family: var(--head); font-size: 28px; text-transform: uppercase; letter-spacing: .03em; }
+  .daypass span { color: var(--mute); display: block; font-size: 16px; }
+  .tourbox { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--red); padding: 22px 24px; scroll-margin-top: 90px; }
+  .tourbox b { font-family: var(--head); font-size: 28px; text-transform: uppercase; letter-spacing: .03em; }
+  .tourbox span { color: var(--mute); display: block; font-size: 16px; }
+  dialog.tour .callrow { display: grid; gap: 12px; margin-top: 6px; }
+  dialog.tour .callrow a { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; border: 1px solid var(--line); background: var(--char); padding: 16px 18px; text-decoration: none; }
+  dialog.tour .callrow a:hover { border-color: var(--white); }
+  dialog.tour .callrow b { display: block; font-family: var(--head); font-size: 26px; text-transform: uppercase; letter-spacing: .03em; line-height: 1.05; }
+  dialog.tour .callrow small { display: block; color: var(--mute); font-size: 15px; margin-top: 2px; }
+  dialog.tour .callrow .num { font-family: var(--head); font-weight: 800; font-size: 28px; letter-spacing: .02em; color: var(--white); white-space: nowrap; }
+  dialog.tour .callrow .num::before { content: "Call "; font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red-text); margin-right: 6px; }
+  .fine { color: var(--mute); font-size: 15px; margin-top: 16px; max-width: 80ch; }
+  @media (max-width: 980px) { .plans { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .plans { grid-template-columns: 1fr; } }
+
+  /* hours */
+  .hours { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+  .hbox { background: var(--panel); border: 1px solid var(--line); padding: 22px 24px; }
+  .hbox h3 { font-size: 24px; margin-bottom: 10px; }
+  .hbox table { width: 100%; border-collapse: collapse; font-size: 17px; font-variant-numeric: tabular-nums; }
+  .hbox td { padding: 5px 0; border-bottom: 1px solid var(--line); }
+  .hbox td:last-child { text-align: right; color: var(--white); }
+  .hbox td:first-child { color: var(--mute); }
+  .hbox p { margin: 10px 0 0; color: var(--mute); font-size: 15px; }
+  @media (max-width: 760px) { .hours { grid-template-columns: 1fr; } }
+
+  /* included */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+  .card { background: var(--char); border: 1px solid var(--line); padding: 26px; }
+  .card .ico { width: 40px; height: 40px; color: var(--red); margin-bottom: 14px; }
+  .card h3 { font-size: 24px; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--mute); font-size: 17px; }
+  @media (max-width: 900px) { .grid3 { grid-template-columns: 1fr; } }
+  .gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+  .gal figure { margin: 0; position: relative; aspect-ratio: 4 / 3; background: #1a1a1d center / cover no-repeat; border: 1px solid var(--line); }
+  .gal figcaption { position: absolute; left: 0; bottom: 0; right: 0; padding: 26px 14px 10px; background: linear-gradient(0deg, rgba(10,10,11,.9), transparent); font-family: var(--head); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 18px; }
+  @media (max-width: 700px) { .gal { grid-template-columns: 1fr; } }
+  /* photo galleries: four across (homepage), tall photos (Liberty Lake page) */
+  .gal.four { grid-template-columns: repeat(4, 1fr); }
+  /* Spokane photos: each shown at its own shape, nothing cropped. Photos sit in rows; the photos in a row share one height, so each row fills the full width. */
+  .gal.fit { display: flex; flex-direction: column; gap: 14px; }
+  .gal.fit .frow { display: flex; gap: 14px; }
+  .gal.fit figure { flex: var(--ar) 1 0; min-width: 0; aspect-ratio: var(--ar); }
+  @media (max-width: 700px) {
+    .gal.fit { flex-direction: row; align-items: center; }
+    .gal.fit .frow { display: contents; }
+    .gal.fit figure { flex: 0 0 auto; width: auto; height: 300px; }
+  }
+  .gal.portrait { grid-template-columns: repeat(12, 1fr); }
+  .gal.portrait figure { aspect-ratio: 9 / 16; grid-column: span 3; }
+  @media (max-width: 900px) { .gal.four { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 701px) and (max-width: 900px) {
+    .gal.portrait { grid-template-columns: repeat(2, 1fr); }
+    .gal.portrait figure { grid-column: auto; }
+  }
+
+  /* training */
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
+  .checks { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+  .checks li { padding-left: 30px; position: relative; }
+  .checks li::before { content: ""; position: absolute; left: 0; top: 9px; width: 16px; height: 9px; border-left: 3px solid var(--red); border-bottom: 3px solid var(--red); transform: rotate(-45deg); }
+  .photos { display: grid; gap: 14px; }
+  .photos .photo { aspect-ratio: 16 / 9; }
+  #training h2 { font-size: clamp(32px, 4.4vw, 48px); }
+  #training { padding-top: 56px; }
+  .photo { aspect-ratio: 4 / 3; background: #1a1a1d center / cover no-repeat; border: 1px solid var(--line); }
+  .trainers { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; }
+  .trainers .tr { flex: 0 0 calc((100% - 28px) / 3); }
+  .tr { background: var(--char); border: 1px solid var(--line); display: flex; flex-direction: column; }
+  .tr .pic { aspect-ratio: 4 / 5; background: #1a1a1d center top / cover no-repeat; }
+  .tr .txt { padding: 12px 16px 14px; }
+  .tr b { display: block; font-family: var(--head); font-size: 24px; text-transform: uppercase; letter-spacing: .03em; }
+  .tr span.yrs { color: var(--red-text); font-weight: 600; margin-top: 6px; }
+  .tr span.note { color: #1a1300; font-size: 12px; line-height: 1.3; margin: 8px 0 0; display: inline-block; }
+  .tr span { color: var(--mute); font-size: 15px; line-height: 1.35; display: block; margin-top: 2px; }
+  @media (max-width: 900px) { .split { grid-template-columns: 1fr; } .trainers .tr { flex-basis: calc((100% - 14px) / 2); } }
+  @media (max-width: 480px) { .trainers .tr { flex-basis: 100%; } }
+
+  /* powerlifting */
+  .band { background: var(--red); color: #fff; }
+  .band .lede { color: rgba(255,255,255,.9); }
+  .band .eyebrow { color: #fff; }
+  .pl { display: grid; grid-template-columns: 1fr 1.2fr; gap: 44px; align-items: center; }
+  .pl .logo2 { aspect-ratio: 3 / 2; background: #000 center / contain no-repeat; border: 2px solid rgba(255,255,255,.85); }
+  .eq { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .eq span { border: 2px solid rgba(255,255,255,.85); padding: 8px 14px; font-family: var(--head); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; font-size: 17px; }
+  .pgal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 40px; }
+  .pgal div { aspect-ratio: 1; background: #000 center / cover no-repeat; border: 2px solid rgba(255,255,255,.85); }
+  @media (max-width: 900px) { .pl { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .pgal { grid-template-columns: repeat(2, 1fr); } }
+
+
+  section.alt { background: var(--char); border-block: 1px solid var(--line); }
+  .owner { display: grid; grid-template-columns: 340px 1fr; gap: 0; margin-top: 36px; background: var(--char); border: 1px solid var(--line); }
+  .owner .pic { min-height: 340px; background: #1a1a1d center top / cover no-repeat; }
+  .owner .txt { padding: 36px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .pullq { font-family: var(--head); font-size: clamp(28px, 4vw, 40px); line-height: 1.08; text-transform: uppercase; font-weight: 700; margin: 6px 0; text-wrap: balance; }
+  .owner .who { color: var(--mute); font-size: 16px; margin: 0; }
+  .tq { display: block; font-style: normal; margin-top: 8px; font-size: 16px; color: var(--white); border-left: 3px solid var(--red); padding-left: 10px; }
+  @media (max-width: 760px) { .owner { grid-template-columns: 1fr; } .owner .pic { min-height: 0; aspect-ratio: 4 / 4; } .owner .txt { padding: 24px 20px; } }
+  .stations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 38px; }
+  .stations .big { position: relative; aspect-ratio: 1 / 1.1; background: #000 center / cover no-repeat; border: 2px solid rgba(255,255,255,.85); }
+  .stations .big span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; background: linear-gradient(0deg, rgba(0,0,0,.85), transparent); font-family: var(--head); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 30px; }
+  .barcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+  .bc { background: rgba(0,0,0,.28); border: 2px solid rgba(255,255,255,.85); display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 14px; padding: 10px; }
+  .bc .bp { aspect-ratio: 1; background: #000 center / cover no-repeat; }
+  .bc b { font-family: var(--head); font-size: 24px; text-transform: uppercase; letter-spacing: .03em; line-height: 1.05; }
+  @media (max-width: 760px) { .stations { grid-template-columns: 1fr; } .stations .big { aspect-ratio: 16 / 11; } .barcards { grid-template-columns: 1fr; } }
+
+  /* testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+  .q { background: var(--char); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .q p { margin: 0; font-size: 20px; line-height: 1.4; }
+  .q cite { margin-top: auto; font-style: normal; font-family: var(--head); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red-text); font-size: 15px; }
+  @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+
+  /* faq */
+  details { border-top: 1px solid var(--line); }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; list-style: none; padding: 22px 4px; font-family: var(--head); font-size: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; display: flex; justify-content: space-between; gap: 20px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--red); font-size: 30px; line-height: .8; }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 0 4px 24px; color: var(--mute); max-width: 74ch; }
+  .faq { margin-top: 34px; }
+
+  /* contact + footer */
+  .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+  form { display: grid; gap: 12px; }
+  dialog.book { background: var(--black); color: var(--white); border: 1px solid var(--line); border-radius: 2px; width: min(520px, calc(100% - 32px)); max-height: calc(100% - 32px); overflow: auto; padding: 28px 26px 26px; margin: auto; }
+  dialog.book::backdrop { background: rgba(0,0,0,.72); }
+  dialog.book h3 { font-family: var(--head); text-transform: uppercase; font-size: 30px; line-height: 1; margin: 0 40px 8px 0; }
+  dialog.book p.sub { color: var(--mute); margin: 0 0 18px; }
+  dialog.book .x { position: absolute; top: 12px; right: 12px; background: none; border: 1px solid var(--line); color: var(--white); width: 40px; height: 40px; border-radius: 2px; font-size: 22px; line-height: 1; cursor: pointer; }
+  dialog.book .x:hover { border-color: var(--white); }
+  label.f { font-size: 15px; color: var(--mute); display: grid; gap: 6px; }
+  .formstatus { margin: 4px 0 0; font-size: 16px; line-height: 1.45; padding: 12px 14px; border: 1px solid var(--line); background: var(--panel); color: var(--white); border-radius: 2px; }
+  .formstatus.ok { border-color: #3d9a5f; }
+  .formstatus.err { border-color: var(--red); }
+  .formstatus.preview { border-color: var(--amber); }
+  button[disabled] { opacity: .65; cursor: progress; }
+  input[type=text], select, textarea { font: inherit; background: var(--char); color: var(--white); border: 1px solid var(--line); padding: 14px; border-radius: 2px; width: 100%; }
+  input[type=text]:focus, select:focus, textarea:focus { outline: 2px solid var(--red); outline-offset: 0; }
+  .big { font-family: var(--head); font-size: 42px; font-weight: 800; letter-spacing: .02em; text-decoration: none; display: block; }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  .links a { border: 1px solid var(--line); padding: 10px 18px; text-decoration: none; font-family: var(--head); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 17px; }
+  .links a:hover { border-color: var(--white); }
+  @media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
+  footer { border-top: 1px solid var(--line); padding-block: 30px 110px; color: var(--mute); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* sticky mobile action bar */
+  .mbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--black); border-top: 1px solid var(--line); padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); gap: 8px; }
+  .mbar a { flex: 1; text-align: center; padding: 13px 8px; font-family: var(--head); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 18px; text-decoration: none; border: 2px solid var(--line); }
+  .mbar a.go { background: var(--red); border-color: var(--red); }
+  @media (max-width: 900px) { .mbar { display: flex; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .door { transition: none; } }
+
+  /* phones: shorter page. Long stacks of cards become swipe rows, spacing and extras are trimmed. */
+  @media (max-width: 700px) {
+    body { font-size: 17px; }
+    section { padding-block: 40px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 22px; }
+    .lede { font-size: 17px; margin-top: 10px; }
+    .eyebrow { font-size: 14px; margin-bottom: 4px; }
+    .concept { font-size: 11px; padding: 6px 12px; gap: 4px 10px; }
+    .concept label { padding: 2px 8px; }
+    .bar { min-height: 60px; }
+    .logo b { font-size: 30px; }
+    .hero .wrap { min-height: 560px; padding-block: 56px 28px; justify-content: flex-end; }
+    .hero::before { background: linear-gradient(0deg, rgba(10,10,11,.92) 0%, rgba(10,10,11,.72) 34%, rgba(10,10,11,.18) 62%, rgba(10,10,11,0) 100%); }
+    .hero .hero-in { text-shadow: 0 1px 10px rgba(0,0,0,.85); }
+    .hero .eyebrow { font-size: 12px; margin-bottom: 2px; }
+    .hero h1 { font-size: 36px; line-height: 1; }
+    .hero .lede { font-size: 14.5px; line-height: 1.4; margin-top: 8px; }
+    .hero .cta { margin-top: 12px; gap: 8px; flex-wrap: nowrap; }
+    .hero .cta .btn { flex: 1 1 0; font-size: 15px; padding: 9px 8px; min-height: 42px; letter-spacing: .03em; text-shadow: none; }
+    .start { padding-block: 26px; }
+    .start h2 { display: none; }
+    .start .row { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+    .door { padding: 14px 14px 12px; }
+    .door b { font-size: 21px; }
+    .door span { display: none; }
+    .door i { margin-top: 4px; font-size: 13px; }
+    .btn { font-size: 18px; padding: 12px 20px; min-height: 48px; }
+
+    /* swipe rows */
+    .trainers, .quotes, .gal, .stations, .barcards, .plans { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: -20px; padding-inline: 20px; scroll-padding-inline: 20px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .trainers::-webkit-scrollbar, .quotes::-webkit-scrollbar, .gal::-webkit-scrollbar, .stations::-webkit-scrollbar, .barcards::-webkit-scrollbar, .plans::-webkit-scrollbar { display: none; }
+    .trainers > *, .quotes > *, .gal > *, .stations > *, .barcards > *, .plans > * { scroll-snap-align: start; flex: 0 0 76%; min-width: 0; }
+    .trainers { margin-top: 20px; justify-content: flex-start; }
+    .trainers .tr { flex: 0 0 62%; }
+    .tr .pic { aspect-ratio: 4 / 5; }
+    .tr .txt { padding: 12px 14px 14px; }
+    .tr b { font-size: 21px; }
+    .quotes { margin-top: 18px; }
+    .quotes-b { display: none; }
+    .q { padding: 18px; gap: 10px; }
+    .q p { font-size: 17px; }
+    .gal { margin-top: 18px; }
+    .gal figure { aspect-ratio: 4 / 3; }
+    .gal.portrait figure { aspect-ratio: 9 / 16; }
+    .stations { margin-top: 22px; }
+    .stations .big { aspect-ratio: 4 / 5; flex-basis: 66%; }
+    .stations .big span { display: none; }
+    .barcards { margin-top: 12px; }
+    .bc { grid-template-columns: 80px 1fr; gap: 10px; padding: 8px; }
+    .bc b { font-size: 20px; }
+    .plans { margin-top: 4px; padding-top: 18px; }
+    .plan { padding: 22px 18px 18px; }
+    .plan .price { font-size: 46px; }
+
+    /* people */
+    .owner { margin-top: 20px; grid-template-columns: 36% 1fr; }
+    .owner .pic { aspect-ratio: auto; width: 100%; min-height: 250px; background-position: center top; }
+    .owner .txt { padding: 14px; gap: 4px; }
+    .owner .txt h3 { font-size: 19px; }
+    .owner .txt .eyebrow { font-size: 12px; }
+    .pullq { font-size: 19px; line-height: 1.12; margin: 2px 0; }
+    .owner .who { font-size: 13px; line-height: 1.3; }
+    #training h3[style] { margin-top: 30px !important; }
+    #training .lede[style] { margin-top: 4px !important; }
+
+    /* what you get: compact two-column cards */
+    .grid3 { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+    .card { padding: 14px; }
+    .card .ico { width: 28px; height: 28px; margin-bottom: 8px; }
+    .card h3 { font-size: 20px; margin-bottom: 4px; }
+    .card p { font-size: 14px; line-height: 1.35; }
+    .card .note { display: inline-block; margin: 6px 0 0; }
+
+    /* training, locations */
+    .photo { display: none; }
+    .photos { display: none; }
+    .split { gap: 0; }
+    .checks { margin-top: 14px; gap: 6px; font-size: 16px; }
+    .loc .ph { display: none; }
+    .loc .badge { position: static; align-self: flex-start; }
+    .loc .in { padding: 20px; gap: 10px; }
+    .loc h3 { font-size: 28px; }
+    .loc dl { font-size: 16px; gap: 4px 14px; }
+    .locs { margin-top: 20px; gap: 14px; }
+
+    /* pricing */
+    .tabs { margin-top: 18px; width: 100%; }
+    .tabbtn { flex: 1; padding: 11px 12px; min-height: 48px; }
+    .daypass { padding: 16px; gap: 12px; margin-top: 12px; }
+    .daypass b { font-size: 24px; }
+    .daypass .btn { width: 100%; }
+    .tourbox { padding: 16px; gap: 12px; margin-top: 12px; }
+    .tourbox b { font-size: 24px; }
+    .tourbox .btn { width: 100%; }
+    .fine { font-size: 14px; margin-top: 12px; }
+    .hours { margin-top: 20px; gap: 12px; }
+    .hbox { padding: 16px; }
+    .hbox h3 { font-size: 20px; margin-bottom: 6px; }
+    .hbox table { font-size: 15px; }
+
+    /* faq, contact */
+    summary { font-size: 21px; padding: 16px 2px; }
+    details p { font-size: 16px; margin-bottom: 16px; }
+    .faq { margin-top: 18px; }
+    .contact { gap: 28px; }
+    .big { font-size: 34px; }
+    .links { margin-top: 14px; }
+    form { gap: 10px; }
+    footer { padding-block: 22px 96px; }
+    .hours .hbox:nth-child(2) { display: none; }
+    .eq { margin-top: 16px; gap: 6px; }
+    .eq span { font-size: 14px; padding: 4px 9px; border-width: 1.5px; }
+    #contact .lede { display: none; }
+    #contact h2 { margin-bottom: 6px; }
+    .contact label.f:has(#f-msg) { display: none; }
+
+    /* mobile polish: bigger tap targets, tidy button rows, no lonely card */
+    .vidbtn { font-size: 10px; padding: 5px 8px; letter-spacing: .05em; }
+    .sndbtn { width: 28px; }
+    .sndbtn svg { width: 13px; height: 13px; }
+    .logo { padding-block: 4px; }
+    .hero .hl-a { top: calc(50% - 54px); }
+    .loc .row .btn { flex: 1 1 auto; }
+    #share-experience { padding-block: 36px !important; }
+    #share-experience .btn { width: 100%; }
+    .grid3 > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  }
+
+  /* location pages */
+  .pghero { position: relative; padding-block: 0; background: #111 center 40% / cover no-repeat; }
+  .pghero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,11,.92) 0%, rgba(10,10,11,.7) 55%, rgba(10,10,11,.45) 100%); }
+  .pghero.lit::before { background: linear-gradient(90deg, rgba(10,10,11,.88) 0%, rgba(10,10,11,.55) 50%, rgba(10,10,11,.12) 100%); }
+  .pghero .wrap { position: relative; padding-block: 64px 56px; }
+  .pghero h1 { max-width: 14ch; }
+  .pghero h1 em { font-style: normal; color: var(--red); display: block; font-size: .5em; letter-spacing: .02em; margin-top: 10px; line-height: 1.1; }
+  .crumbs { font-size: 14px; color: var(--mute); margin-bottom: 14px; }
+  .crumbs a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .findus { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin-top: 30px; max-width: 760px; }
+  .box { background: var(--char); border: 1px solid var(--line); padding: 26px 28px; display: grid; gap: 14px; align-content: start; }
+  .box h3 { font-size: 26px; }
+  .box { min-width: 0; }
+  .box dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 18px; font-size: 17px; }
+  .box dt { color: var(--mute); }
+  .box dd { margin: 0; overflow-wrap: anywhere; }
+  .box .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .box p { margin: 0; color: var(--mute); }
+  .more { font-family: var(--head); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 15px; color: var(--red); text-decoration: none; margin-top: 4px; display: inline-block; }
+  .more:hover { color: #fff; }
+  .soon { background: var(--panel); border: 1px dashed var(--line); padding: 28px; margin-top: 22px; display: grid; gap: 8px; }
+  .soon b { font-family: var(--head); font-size: 24px; text-transform: uppercase; letter-spacing: .03em; }
+  .soon span.t { color: var(--mute); }
+  body.nonotes .noteblock { display: none; }
+  .other { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 26px 28px; }
+  .other h3 { margin-bottom: 4px; }
+  .other p { margin: 0; color: var(--mute); }
+  .tourgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; max-width: 900px; }
+  .vcard { position: relative; aspect-ratio: 9 / 16; background: #000 center / cover no-repeat; border: 1px solid var(--line); overflow: hidden; }
+  .vcard video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #000; }
+  .vcard .play { position: absolute; inset: 0; width: 100%; border: 0; background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,0) 50%); cursor: pointer; color: #fff; display: grid; place-items: center; padding: 0; }
+  .vcard .play .dot { width: 68px; height: 68px; border-radius: 50%; background: var(--red); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.5); }
+  .vcard .play .dot svg { margin-left: 4px; }
+  .vcard .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 14px 14px; text-align: left; font-family: var(--head); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 19px; line-height: 1.1; pointer-events: none; }
+  .vcard .cap small { display: block; font-family: var(--body); font-weight: 500; letter-spacing: 0; text-transform: none; font-size: 13px; color: var(--mute); margin-top: 4px; }
+  .tournote { margin: 14px 0 0; color: var(--mute); font-size: 14px; }
+  @media (max-width: 860px) { .findus { grid-template-columns: minmax(0, 1fr); } .other { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 700px) { .tourgrid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: -20px; padding-inline: 20px; scroll-padding-inline: 20px; scrollbar-width: none; } .tourgrid::-webkit-scrollbar { display: none; } .tourgrid > .vcard { flex: 0 0 66%; scroll-snap-align: start; } }
+  /* video hero on a location page (Liberty Lake). The picture stays as the fallback and poster. */
+  .pghero::before { z-index: 1; }
+  .pghero .wrap { z-index: 2; }
+  .pghero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .pghero .vidctl { z-index: 3; }
+  /* the Spokane footage is brighter than Liberty Lake's, so it gets a slightly darker wash for readable text */
+  /* Spokane and Liberty Lake share one hero height (sized for the taller page at each width) so flipping between them doesn't jump. */
+  .pghero.vidhero { min-height: 712px; }
+  @media (max-width: 880px) { .pghero.vidhero { min-height: 684px; } }
+  @media (max-width: 700px) { .pghero.vidhero { min-height: 656px; } }
+  @media (max-width: 490px) { .pghero.vidhero { min-height: 683px; } }
+  @media (max-width: 413px) { .pghero.vidhero { min-height: 710px; } }
+  @media (max-width: 374px) { .pghero.vidhero { min-height: 735px; } }
+  @media (max-width: 359px) { .pghero.vidhero { min-height: 765px; } }
+  @media (max-width: 329px) { .pghero.vidhero { min-height: 815px; } }
+  /* On wide screens the hero text hugs the left edge, like the homepage hero (otherwise it sits in the middle-left of the page). */
+  @media (min-width: 881px) { .pghero.vidhero > .wrap { max-width: none; margin-inline: 0; padding-inline: 40px; } .pghero.vidhero .facts { max-width: 1080px; } }
+  .pghero.brightvid::before { background: linear-gradient(90deg, rgba(10,10,11,.9) 0%, rgba(10,10,11,.72) 55%, rgba(10,10,11,.42) 100%); }
+  @media (max-width: 700px) { .pghero.brightvid::before { background: rgba(10,10,11,.74); } }
+  @media (prefers-reduced-motion: reduce) { .pghero video, .pghero .vidctl { display: none; } }
+  @media (max-width: 700px) { .pghero .wrap { padding-block: 40px 34px; } .pghero h1 { font-size: 44px; } .box { padding: 18px; } .box h3 { font-size: 22px; } .other { padding: 18px; } }
+  /* Phones: show the whole video instead of zooming into a tall box. The video sits on top at its own shape, and the words go underneath on plain dark. (Visitors who turn animation off keep the original layout.) */
+  @media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+    .pghero.vidhero { min-height: 0; background-image: none !important; background-color: var(--black); }
+    .pghero.vidhero::before { display: none; }
+    .pghero.vidhero #pgvid { position: relative; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .pghero.vidhero .txtbtn { display: none; }
+    .pghero.vidhero .vidctl { position: absolute; top: calc(56.25vw + 15px); right: 20px; bottom: auto; left: auto; }
+    .pghero.vidhero > .wrap { padding-block: 12px 34px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Chrome Personal Training Centre - Spokane",
+  "telephone": "+1-509-315-4827",
+  "email": "chromeptc@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "206 E North Foothills",
+    "addressLocality": "Spokane",
+    "addressRegion": "WA",
+    "addressCountry": "US",
+    "postalCode": "99207"
+  },
+  "sameAs": [
+    "https://www.instagram.com/chromeptc_",
+    "https://www.tiktok.com/@chromeptc",
+    "https://www.facebook.com/share/16BjYKckQu/"
+  ],
+  "url": "https://www.chromepersonaltraining.com/spokane.html",
+  "image": "https://www.chromepersonaltraining.com/media/floor-mirror.jpg"
+}
+</script>
+</head>
+<body>
+<span id="pagetop"></span>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="index.html" aria-label="Chrome Personal Training Centre, home"><b>CHROME PTC</b><span>PERSONAL TRAINING CENTRE</span></a>
+    <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="index.html#pricing">Memberships</a>
+      <a href="index.html#training">Personal Training</a>
+      <a href="spokane.html">Spokane</a>
+      <a href="liberty-lake.html">Liberty Lake</a>
+      <a href="index.html#contact">Contact</a>
+      <span class="soc" aria-label="Social media">
+      <a href="https://www.instagram.com/chromeptc_" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.tiktok.com/@chromeptc" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.6V9a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5z"/></svg></a>
+      <a href="https://www.facebook.com/share/16BjYKckQu/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.300 0-3.800 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a>
+      </span>
+      <a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup">Join now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="pghero lit vidhero brightvid" style="background-image:url('media/floor-mirror.jpg'); background-position: 78% 40%" aria-label="Chrome PTC Spokane">
+  <video id="pgvid" autoplay muted loop playsinline preload="auto" poster="media/hero.jpg" data-desktop="media/hero-desktop.mp4" data-mobile="" aria-hidden="true"><source src="media/hero-desktop.mp4" type="video/mp4"></video>
+  <div class="vidctl">
+    <button type="button" class="sndbtn" id="sndbtn" aria-pressed="false" aria-label="Turn video sound on" title="Sound">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><g id="snd-off"><path d="M17 9l5 6M22 9l-5 6"/></g><g id="snd-on" hidden><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></g></svg>
+    </button>
+    <button type="button" class="vidbtn" id="vidbtn" aria-pressed="false" aria-label="Pause background video">Pause</button>
+    <button type="button" class="vidbtn txtbtn" id="txtbtn" aria-pressed="false" aria-label="Hide the text so the whole video is visible">Hide text</button>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Chrome PTC</a> / Spokane</div>
+    <h1>Chrome PTC Spokane<em>24-hour gym in Spokane</em></h1>
+    <p class="lede" style="color:#d4d4d8">Established in May 2009, our flagship facility is open 24 hours a day. Featuring a unique mix of old-school gym equipment and high-end modern machines. Immaculately clean, never overcrowded, with a serious yet friendly atmosphere. Complete with a private red light infrared sauna and a 360-degree posing room.</p>
+    <div class="facts"><div><b>24 / 7</b><span>Member access</span></div><div><b>$60</b><span>Month to month</span></div><div><b>$16.36</b><span>Day pass</span></div><div><b>2009</b><span>Locally owned since</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Find us</div>
+    <h2>Visit Chrome PTC Spokane</h2>
+    <div class="findus">
+      <div class="box">
+        <h3>Address and hours</h3>
+        <dl>
+          <dt>Address</dt><dd>206 E North Foothills, Spokane, WA 99207</dd>
+          <dt>Members</dt><dd>Open 24 hours, every day</dd>
+          <dt>Staffed</dt><dd>Mon to Fri, 5am to 9pm<br>Sat and Sun, 8am to 8pm</dd>
+          <dt>Phone</dt><dd><a href="tel:5093154827">(509) 315-4827</a></dd>
+          <dt>Email</dt><dd><a href="mailto:chromeptc@gmail.com">chromeptc@gmail.com</a></dd>
+        </dl>
+        <div class="row"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=206+E+North+Foothills+Spokane+WA+99207">Get directions</a><a class="btn ghost" href="tel:5093154827">Call us</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Memberships</div>
+    <h2>Memberships at Chrome PTC Spokane</h2>
+    <p class="lede">24/7 access on every plan. All memberships include the red light infrared sauna and the posing room.</p>
+    <p class="lede nofees" style="margin-top:10px; color:var(--white); font-weight:600">No other fees or extra charges. The price you see is the price you pay.</p>
+    <div style="margin-top:22px">
+        <div class="plans">
+        <div class="plan"><div class="name">Month to month</div><div class="price">$60<small> /mo</small></div><div class="sub">$50 signup fee</div><ul><li>30-day cancellation</li><li>No contract</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/acd2e2076086a0a5d70c58ed2dafc60b">Choose</a></div>
+        <div class="plan"><div class="name">3 months</div><div class="price">$174.56</div><div class="sub">about $58.19 a month · $25 signup fee</div><ul><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/0fd626d5855e303d28981720148c6d33">Choose</a></div>
+        <div class="plan"><div class="name">6 months</div><div class="price">$327.30</div><div class="sub">about $54.55 a month · no signup fee</div><ul><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/748e233f7ab85492a94d342a7b5d9e4c">Choose</a></div>
+        <div class="plan best"><span class="tag">Best value</span><div class="name">12 months</div><div class="price">$600.05</div><div class="sub">about $50 a month · no signup fee</div><ul><li>Lowest monthly cost</li><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/9ff966c6db70814fae646c8088134ea8">Choose</a></div>
+        </div>
+    </div>
+    <div class="daypass" id="daypass"><div><b>Day pass · $16.36</b><span>Single use · This gym only · 18+ · 5am to 8pm Mon to Fri, 8am to 7pm weekends</span></div><a class="btn ghost" href="https://chromeptc.gymmasteronline.com/portal/signup/details/30c297affefc8ce081e1c9f07a5107c8">Get a day pass</a></div>
+    <div class="both"><div><b>Do you want access to both gyms?</b><span style="display:block">Add the other facility to your membership for just $30* per month!</span><span style="display:block; margin-top:8px">Ask an associate for more information and to learn how to get started.</span></div></div>
+    <p class="fine">Month to month has a 30-day cancellation, and prepaid plans renew unless you cancel 7 days before billing. Choose a plan and you'll finish on our secure member portal, where you pay and set up your account.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What's here</div>
+    <h2>Inside Chrome PTC Spokane</h2>
+    <div class="grid3">
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Open 24/7</h3><p>Members can access the gym with either Bluetooth or a designated key fob.</p></div>
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 20l4-9 4 9M9 9h6"/></svg><h3>Full powerlifting setup</h3><p>The first full powerlifting setup in Spokane: combo racks, calibrated kilos, Texas power and deadlift bars, and Rogue Ohio bars.</p></div>
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 0-5 1-8z"/></svg><h3>Red light infrared sauna</h3><p>A single-person red light infrared sauna in each locker room.</p></div>
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 20l4-9 4 9M9 9h6"/></svg><h3>360° posing room</h3><p>For posing, social media, check-ins or selfies. Open to every member.</p></div>
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg><h3>Locker rooms and showers</h3><p>Each locker room has showers, and the floor is cleaned throughout the day.</p></div>
+      <div class="card"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></svg><h3>Serious equipment</h3><p>A unique selection that is clean, well maintained and rarely out of order.</p></div>
+      </div>
+    <div class="gal fit"><div class="frow"><figure role="img" aria-label="Leg press and machines" style="background-image:url('media/sp-photo-legpress.jpg'); --ar:0.7428"></figure><figure role="img" aria-label="Racks and plate-loaded equipment" style="background-image:url('media/sp-photo-racks.jpg'); --ar:0.5622"></figure><figure role="img" aria-label="Dumbbell rack and mirrors" style="background-image:url('media/sp-photo-dumbbells.jpg'); --ar:0.7452"></figure><figure role="img" aria-label="The main floor and bench area" style="background-image:url('media/sp-photo-floor.jpg'); --ar:0.6390"></figure></div><div class="frow"><figure role="img" aria-label="The main floor" style="background-image:url('media/floor-wide.jpg'); --ar:1.6990"></figure><figure role="img" aria-label="360° posing room" style="background-image:url('media/posing-room.jpg'); --ar:1.7331"></figure><figure role="img" aria-label="Locker rooms" style="background-image:url('media/sp-locker-room.jpg'); --ar:1.8519"></figure></div></div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Good to know</div>
+    <h2>Questions about Spokane</h2>
+    <div class="faq"><details><summary>Is Chrome PTC Spokane open 24 hours?</summary><p>Yes, for members. You can train any time with the GymMaster app over Bluetooth, or a key fob. The gym is staffed 5am to 9pm Monday to Friday and 8am to 8pm on weekends, and staffed hours are subject to change.</p></details><details><summary>How much is a membership at Chrome PTC Spokane?</summary><p>Month to month is $60 a month with a $50 signup fee and a 30-day cancellation. Prepay options are $174.56 for 3 months, $327.30 for 6 months and $600.05 for 12 months. There are no other associated fees at either gym.</p></details><details><summary>Can I try Spokane before I join?</summary><p>Yes, with a day pass for $16.36 (18 and older). It is good 5am to 8pm Monday to Friday and 8am to 7pm on weekends. There are no free trials or free guest visits.</p></details><details><summary>Can I use both Spokane and Liberty Lake?</summary><p>Yes. Add the other facility to your membership for just $30* per month! Ask an associate for more information and to learn how to get started.</p></details><details><summary>How do I join?</summary><p>Pick your plan above and finish on our secure member portal. Then call or email us to book a short orientation: a tour, Bluetooth and key fob setup, and a walk through the facility rules.</p></details></div>
+  </div>
+</section>
+
+<section id="share-experience" style="padding-block:56px">
+  <div class="wrap">
+    <div class="eyebrow">Share your experience</div>
+    <h2>Had a good visit? Tell people on Google.</h2>
+    <p class="lede">A short Google review helps the next person find a gym where they'll feel at home.</p>
+    <p style="margin-top:22px; display:flex; flex-wrap:wrap; gap:12px; align-items:center"><a class="btn" href="https://g.page/r/CXkowf0JMewiEBM/review" target="_blank" rel="noopener">Review Chrome PTC Spokane</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="other">
+      <div><div class="eyebrow">Our other gym</div><h3>Chrome PTC Liberty Lake</h3><p>Our newest gym in Liberty Lake is open 24 hours for members, with a 4-person red light infrared sauna and a posing room.</p></div>
+      <a class="btn ghost" href="liberty-lake.html#pagetop">See Liberty Lake</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span class="fleft"><span>© Chrome Personal Training Centre</span><span class="flinks"><a href="spokane.html">Spokane</a><a href="liberty-lake.html">Liberty Lake</a></span></span></div>
+</footer>
+
+<div class="mbar"><a href="tel:5093154827">Call</a><a href="#daypass">Day pass</a><a class="go" href="https://chromeptc.gymmasteronline.com/portal/signup">Join</a></div>
+
+<script>
+  (function () {
+    var mb = document.getElementById('menubtn'), nav = document.getElementById('mainnav');
+    mb.addEventListener('click', function () { var o = nav.classList.toggle('open'); mb.setAttribute('aria-expanded', o ? 'true' : 'false'); });
+    nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') { nav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); } });
+    var nt = document.getElementById('notestoggle');
+    if (nt) { nt.addEventListener('change', function () { document.body.classList.toggle('nonotes', !nt.checked); }); }
+  })();
+</script>
+<script>
+  (function () {
+    var v = document.getElementById('pgvid'); if (!v) return;
+    var vb = document.getElementById('vidbtn'), sb = document.getElementById('sndbtn'), so = document.getElementById('snd-on'), sf = document.getElementById('snd-off');
+    var tb = document.getElementById('txtbtn'), heroEl = document.querySelector('.pghero');
+    if (tb && heroEl) { tb.addEventListener('click', function () { var off = !heroEl.classList.contains('notext'); heroEl.classList.toggle('notext', off); tb.textContent = off ? 'Show text' : 'Hide text'; tb.setAttribute('aria-pressed', off ? 'true' : 'false'); tb.setAttribute('aria-label', off ? 'Show the text over the video again' : 'Hide the text so the whole video is visible'); }); }
+    var userPaused = false, src = (window.innerWidth < 700 && v.dataset.mobile) ? v.dataset.mobile : v.dataset.desktop;
+    function setSound(on) {
+      v.muted = !on; if (on) v.volume = 1;
+      so.hidden = !on; sf.hidden = on;
+      sb.setAttribute('aria-pressed', on ? 'true' : 'false');
+      sb.setAttribute('aria-label', on ? 'Turn video sound off' : 'Turn video sound on');
+    }
+    function kick() { if (!userPaused && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } }
+    sb.addEventListener('click', function () {
+      var turnOn = v.muted; setSound(turnOn);
+      if (turnOn) { userPaused = false; vb.textContent = 'Pause'; vb.setAttribute('aria-pressed', 'false'); kick(); }
+    });
+    vb.addEventListener('click', function () {
+      if (v.paused) { userPaused = false; var q = v.play(); if (q && q.catch) q.catch(function () {}); vb.textContent = 'Pause'; vb.setAttribute('aria-pressed', 'false'); }
+      else { userPaused = true; v.pause(); vb.textContent = 'Play'; vb.setAttribute('aria-pressed', 'true'); }
+    });
+    // A tour clip further down the page starts muted, but if the hero sound is on, switch it off so the two never overlap.
+    document.addEventListener('play', function (e) { if (e.target !== v && e.target.tagName === 'VIDEO' && !v.muted) setSound(false); }, true);
+    // Some hosts (and Safari on iPhone and Mac) can't stream the file directly, so fall back to downloading it and playing it from memory.
+    function blobLoad() {
+      if (v.dataset.blob) return; v.dataset.blob = '1';
+      fetch(src).then(function (r) { return r.blob(); }).then(function (b) { var m = v.muted; v.src = URL.createObjectURL(b); v.muted = m; v.load(); kick(); }).catch(function () {});
+    }
+    var srcEl = v.querySelector('source'); if (srcEl) srcEl.addEventListener('error', blobLoad);
+    v.addEventListener('error', blobLoad);
+    setTimeout(function () { if (v.readyState < 2) blobLoad(); }, 4000);
+    v.addEventListener('loadeddata', kick); v.addEventListener('canplay', kick);
+    document.addEventListener('pointerdown', kick); document.addEventListener('touchstart', kick, { passive: true });
+    if (src !== v.dataset.desktop) { v.src = src; v.load(); kick(); }
+  })();
+</script>
+
+</body>
+</html>
