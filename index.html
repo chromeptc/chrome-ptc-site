@@ -100,6 +100,8 @@
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 70px; }
   .logo { font-family: var(--head); font-weight: 800; text-transform: uppercase; text-decoration: none; line-height: .9; }
   .logo b { display: block; font-size: 34px; letter-spacing: .02em; }
+  /* the real Chrome PTC logo (white on black). 'lighten' blending lets the logo's black background take on the header colour, so no box shows around it. */
+  .logo img { display: block; height: 56px; width: auto; max-width: none; mix-blend-mode: lighten; }
   .logo span { display: block; white-space: nowrap; font-size: 11px; letter-spacing: .28em; font-weight: 600; color: var(--mute); margin-top: 2px; }
   header.top .wrap { max-width: 1320px; }
   nav.main { display: flex; align-items: center; gap: 18px; }
@@ -423,6 +425,7 @@
     .concept label { padding: 2px 8px; }
     .bar { min-height: 60px; }
     .logo b { font-size: 30px; }
+    .logo img { height: 44px; }
     .hero .wrap { min-height: 560px; padding-block: 56px 28px; justify-content: flex-end; }
     .hero::before { background: linear-gradient(0deg, rgba(10,10,11,.92) 0%, rgba(10,10,11,.72) 34%, rgba(10,10,11,.18) 62%, rgba(10,10,11,0) 100%); }
     .hero .hero-in { text-shadow: 0 1px 10px rgba(0,0,0,.85); }
@@ -545,7 +548,7 @@
 
 <header class="top">
   <div class="wrap bar">
-    <a class="logo" href="#top" aria-label="Chrome Personal Training Centre, home"><b>CHROME PTC</b><span>PERSONAL TRAINING CENTRE</span></a>
+    <a class="logo" href="#top" aria-label="Chrome Personal Training Centre, home"><img src="media/logo-chrome-ptc.jpg" alt="Chrome PTC, 24/7 gym memberships" width="977" height="417"></a>
     <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
     <nav class="main" id="mainnav" aria-label="Main">
       <a href="#pricing">Memberships</a>
