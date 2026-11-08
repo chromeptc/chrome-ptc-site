@@ -305,7 +305,7 @@
   @media (max-width: 700px) {
     .gal.fit { flex-direction: row; align-items: center; }
     .gal.fit .frow { display: contents; }
-    .gal.fit figure { flex: 0 0 auto; width: auto; height: 300px; }
+    .gal.fit figure { flex: 0 0 auto; height: auto; width: min(calc(300px * var(--ar)), 80vw); scroll-snap-align: start; }
   }
   .gal.portrait { grid-template-columns: repeat(12, 1fr); }
   .gal.portrait figure { aspect-ratio: 9 / 16; grid-column: span 3; }
