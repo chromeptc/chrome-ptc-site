@@ -195,7 +195,7 @@
 
   /* start here */
   .start { background: var(--char); border-block: 1px solid var(--line); padding-block: 40px; }
-  .start .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+  .start .row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 16px; }
   .door { display: flex; flex-direction: column; gap: 4px; text-decoration: none; background: var(--black); border: 1px solid var(--line); padding: 20px 22px; transition: border-color .15s, transform .15s; }
   .door:hover { border-color: var(--red); }
   .door b { font-family: var(--head); font-size: 26px; text-transform: uppercase; letter-spacing: .03em; line-height: 1.05; }
@@ -607,7 +607,6 @@
     <h2 style="font-size:clamp(30px,5vw,44px)">What brings you in?</h2>
     <div class="row">
       <a class="door" href="#pricing"><b>I want to join</b><span>Plans for Spokane and Liberty Lake, with prices.</span><i>See memberships →</i></a>
-      <a class="door" href="#daypass"><b>I want to try it first</b><span>Day passes are $21.82.</span><i>Get a day pass →</i></a>
       <a class="door" href="#training"><b>I want a trainer</b><span>One-on-one training for any fitness level.</span><i>Meet the trainers →</i></a>
     </div>
   </div>
@@ -756,7 +755,6 @@
         <div class="plan"><div class="name">6 months</div><div class="price">$327.30</div><div class="sub">about $54.55 a month · no signup fee</div><ul><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/748e233f7ab85492a94d342a7b5d9e4c">Choose</a></div>
         <div class="plan best"><span class="tag">Best value</span><div class="name">12 months</div><div class="price">$600.05</div><div class="sub">about $50 a month · no signup fee</div><ul><li>Lowest monthly cost</li><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/9ff966c6db70814fae646c8088134ea8">Choose</a></div>
       </div>
-      <div class="daypass" id="daypass"><div><b>Day pass · $21.82</b><span>Single use · This gym only · 18+ · 5am to 8pm Mon to Fri, 8am to 7pm weekends</span></div><a class="btn ghost" href="https://chromeptc.gymmasteronline.com/portal/signup/details/30c297affefc8ce081e1c9f07a5107c8">Get a day pass</a></div>
     </div>
 
     <div id="plansL" role="tabpanel" aria-labelledby="tabL" hidden>
@@ -766,7 +764,6 @@
         <div class="plan"><div class="name">6 months</div><div class="price">$469.13</div><div class="sub">about $78.19 a month · no signup fee</div><ul><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/5e295d232c22e92dea305d44ced4743a">Choose</a></div>
         <div class="plan best"><span class="tag">Best value</span><div class="name">12 months</div><div class="price">$818.25</div><div class="sub">about $68.19 a month · no signup fee</div><ul><li>Lowest monthly cost</li><li>Renews unless you cancel 7 days before billing</li></ul><a class="btn" href="https://chromeptc.gymmasteronline.com/portal/signup/details/2b1f0789c08bb2d4c3d13db8bebd0ea3">Choose</a></div>
       </div>
-      <div class="daypass" id="daypassL"><div><b>Day pass · $21.82</b><span>Single use · This gym only · 7am to 8pm Mon to Fri, 8am to 7pm weekends</span></div><a class="btn ghost" href="https://chromeptc.gymmasteronline.com/portal/signup/details/b79d6d06f61088c538dce60d3e608214">Get a day pass</a></div>
     </div>
     <div class="tourbox" id="booktour"><div><b>Book a Tour!</b><span>Call the gym you're interested in to set up a tour.</span></div><button class="btn" type="button" id="tourbtn" aria-haspopup="dialog">Book a tour</button></div>
     <div class="both"><div><b>Do you want access to both gyms?</b><span style="display:block">Add the other facility to your membership for just $30* per month!</span><span style="display:block; margin-top:8px">Ask an associate for more information and to learn how to get started.</span></div></div>
@@ -801,7 +798,7 @@
     <h2>Quick answers.</h2>
     <div class="faq">
       <details><summary>Is the gym really open 24/7?</summary><p>Yes. Members get in any time with the GymMaster app over Bluetooth, or a key fob. The gym is staffed during posted hours, which are subject to change.</p></details>
-      <details><summary>Can I try it before I join?</summary><p>Yes, with a day pass: $21.82 at either gym. Everyone in the gym is either a member or a day pass holder, so there are no free trials or free guest visits.</p></details>
+      <details><summary>Can I try it before I join?</summary><p>Yes, with a day pass: $21.82 at either gym. A day pass only works at the gym you buy it for, so get it from that gym's page: <a href="spokane.html#daypass">Spokane day pass</a> or <a href="liberty-lake.html#daypass">Liberty Lake day pass</a>. Everyone in the gym is either a member or a day pass holder, so there are no free trials or free guest visits.</p></details>
       <details><summary>Can I use both Spokane and Liberty Lake?</summary><p>Yes. Add the other facility to your membership for just $30* per month! Ask an associate for more information and to learn how to get started.</p></details>
       <details><summary>What if I want to cancel?</summary><p>Month-to-month memberships at both gyms have a 30-day cancellation. Prepaid plans (3, 6 and 12 months) renew automatically unless you give notice 7 days before billing. Questions? Call (509) 315-4827.</p></details>
       <details><summary>What happens after I sign up?</summary><p>Call or email us for a short orientation. We'll give you a tour, set up your Bluetooth and key fob access, and go over the facility rules.</p></details>
@@ -877,7 +874,7 @@
   <div class="wrap"><span class="fleft"><span>© Chrome Personal Training Centre</span><span class="flinks"><a href="spokane.html">Spokane</a><a href="liberty-lake.html">Liberty Lake</a></span></span></div>
 </footer>
 
-<div class="mbar"><a href="tel:5093154827">Call</a><a href="#daypass">Day pass</a><a class="go" href="https://chromeptc.gymmasteronline.com/portal/signup">Join</a></div>
+<div class="mbar"><a href="tel:5093154827">Call</a><a class="go" href="https://chromeptc.gymmasteronline.com/portal/signup">Join</a></div>
 
 <script>
   (function () {
@@ -887,14 +884,6 @@
     var f = document.getElementById('tabF'), l = document.getElementById('tabL'), pf = document.getElementById('plansF'), pl = document.getElementById('plansL');
     function pick(loc) { var isF = loc === 'F'; f.setAttribute('aria-selected', isF); l.setAttribute('aria-selected', !isF); pf.hidden = !isF; pl.hidden = isF; }
     f.addEventListener('click', function () { pick('F'); }); l.addEventListener('click', function () { pick('L'); });
-    /* "Day pass" links go to the day pass of whichever gym tab is showing (Spokane by default). */
-    document.querySelectorAll('a[href="#daypass"]').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var t = document.getElementById(pl.hidden ? 'daypass' : 'daypassL');
-        if (!t) return;
-        e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    });
     var nt = document.getElementById('notestoggle');
     if (nt) { nt.addEventListener('change', function () { document.body.classList.toggle('nonotes', !nt.checked); }); }
     var v = document.getElementById('herovid'), vb = document.getElementById('vidbtn'), v2 = document.getElementById('herovid2'), st = document.getElementById('splittoggle');
